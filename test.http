@@ -1,0 +1,47 @@
+POST http://localhost:8080/addPerson HTTP/1.1
+content-type: application/json
+
+[
+    {
+        "id": 12345,
+        "name": "potato",
+        "mobile": "010-1111-2222",
+        "email": "test@test.com",
+        "address": [
+            "address01",
+            "address02"
+        ]
+    },
+    {
+        "id": 12346,
+        "name": "potato02",
+        "mobile": "010-1111-3333",
+        "email": "potato2@test.com",
+        "address": [
+            "address11",
+            "address22"
+        ]
+    }
+]
+
+
+###
+POST http://localhost:8080/getAll 
+Content-Type: application/json
+
+{
+    getAllPerson{
+        id
+    }
+}
+
+###
+POST http://localhost:8080/getAll
+Content-Type: application/json
+
+{
+    findPerson(email:"test@test.com"){
+        name
+    }
+}
+
